@@ -1,0 +1,32 @@
+class Box 
+{
+    int l,b,h;
+    void putdata()
+    {
+        l=10;
+        b=10;
+        h=10;
+    }
+    void putdata(int x,int y,int z)
+    {
+        l=x;
+        b=y;
+        h=z;
+    }
+    void display()
+    {
+        System.out.println(l+" "+b+" "+h);
+    }
+}
+class DemoBox
+{
+    public static void main(String[]args)
+    {
+        Box b1=new Box();
+        Box b2=new Box();
+        b1.putdata();
+        b2.putdata(1,2,3);
+        b1.display();
+        b2.display();
+    }
+}
