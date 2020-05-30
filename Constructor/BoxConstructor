@@ -1,0 +1,30 @@
+class Box
+{
+    private int l,b,h;
+    public Box()//Default constructor
+    {
+        l=10;
+        b=10;
+        h=10;
+    }
+    public Box(int x,int y,int z)//parameterised construtor
+    {
+        l=x;
+        b=y;
+        h=z;
+    }
+    public void display()
+    {
+        System.out.println(l+" "+b+" "+h);
+    }
+}
+class BoxConstructor
+{
+    public static void main(String[]args)
+    {
+        Box b1=new Box();
+        Box b2=new Box(1,2,3);
+        b1.display();
+        b2.display();
+    }
+}
