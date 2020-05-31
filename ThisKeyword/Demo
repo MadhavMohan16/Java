@@ -1,0 +1,28 @@
+class Box5
+{
+    private int l,b,h;
+    public Box5()
+    {
+        l=b=h=0;
+    }
+    public Box5(int l,int b,int h)
+    {
+        l=l;
+        b=b;
+        h=h;
+    }
+    public  void display()
+    {
+        System.out.println(l+" "+b+" "+h);
+    }
+}
+class DemoBox
+{
+    public static void main(String[]args)
+    {
+        Box5 b1=new Box5();
+        Box5 b2=new Box5(3,4,5);
+        b1.display();
+        b2.display();
+    }
+}
