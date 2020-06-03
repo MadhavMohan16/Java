@@ -1,0 +1,30 @@
+class Student2
+{
+    int rollno;
+    String name;
+    static String college="ITs";
+    static void change()
+    {
+        college="BBDIT";
+    }
+    Student2(int r,String n)
+    {
+        rollno=r;
+        name=n;
+    }
+    void display()
+    {
+        System.out.println(rollno+" "+name+" "+college);
+    }
+}
+class TestStaticVariable2
+{
+    public static void main(String[]args)
+    {
+        Student2 s1=new Student2(111,"karan");
+        Student2 s2=new Student2(222,"sameer");
+        Student2.change();
+        s1.display();
+        s2.display();
+    }
+}
