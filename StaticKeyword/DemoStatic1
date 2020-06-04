@@ -1,0 +1,36 @@
+class Demo1
+{
+    int a,b;//non static instance member variable
+    static int c=2,d;//static intance member variable
+    public Demo1()
+    {
+        a=5;
+        b=3;
+        c++;
+    }
+    static 
+    {
+        d=c+13;
+        System.out.println("This is a static block");
+    }
+    void display()
+    {
+        System.out.println(a+" "+b+" "+c+" "+d);
+    }
+    public static void show()
+    {
+        c=19;
+        System.out.println(c+" "+d);
+    }
+}
+class DemoStatic1
+{
+    public static void main(String[]args)
+    {
+        System.out.println("This is a main method");
+        Demo1 ob=new Demo1();
+        Demo1.show();
+        Demo1.d=21;
+        ob.display();
+    }
+}
