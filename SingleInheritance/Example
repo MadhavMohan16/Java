@@ -1,0 +1,39 @@
+class Superclass
+{
+    int i,j;
+    void showij()
+    {
+        System.out.println(i+" "+j);
+    }
+}
+class Subclass extends Superclass
+{
+    int k;
+    void showk()
+    {
+        System.out.println(k);
+    }
+    void sum()
+    {
+        System.out.println(i+j+k);
+    }
+}
+class Example
+{
+    public static void main(String[]args)
+    {
+        Superclass ob1=new Superclass();
+        Subclass ob2=new Subclass();
+        ob1.i=10;
+        ob1.j=20;
+        System.out.println("Contents of superclass");
+        ob1.showij();
+        ob2.i=30;
+        ob2.j=40;
+        ob2.k=50;
+        System.out.println("Contents of subclass");
+        ob2.showij();
+        ob2.showk();
+        ob2.sum();
+    }
+}
