@@ -1,28 +1,31 @@
-class A1
+class Animal
 {
-    int i;
-    private int j;
-    void setij(int x,int y)
+    void eat()
     {
-        i=x;
-        j=y;
+        System.out.println("eating...");
     }
 }
-class B1 extends A1
+class Dog extends Animal
 {
-    int total;
-    void sum()
+    void bark()
     {
-        total=i+j;
+         System.out.println("barking...");
     }
 }
-class Access
+class BabyDog extends Dog
+{
+    void weep()
+    {
+        System.out.println("weeping...");
+    }
+}
+class Example
 {
     public static void main(String[]args)
     {
-        B1 ob=new B1();
-        ob.setij(10,12);
-        ob.sum();
-        System.out.println("Total is="+ob.total);
+        BabyDog ob=new BabyDog();
+        ob.weep();
+        ob.bark();
+        ob.eat();
     }
 }
