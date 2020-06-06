@@ -1,0 +1,45 @@
+class Animal
+{
+    void eat()
+    {
+        System.out.println("eating...");
+    }
+}
+class Dog extends Animal
+{
+    void bark()
+    {
+        System.out.println("barking...");
+    }
+}
+class Cat extends Animal
+{
+    void meow()
+    {
+        System.out.println("meowing...");
+    }
+}
+class BabyDog extends Dog
+{
+    void weep()
+    {
+        System.out.println("weeping...");
+    }
+}
+class Example
+{
+    public static void main(String[]args)
+    {
+        Dog d=new Dog();
+        Cat c=new Cat();
+        BabyDog b=new BabyDog();
+        d.bark();
+        d.eat();
+        c.meow();
+        c.eat();
+        b.weep();
+        b.bark();
+        b.eat();
+    }
+}
+        
