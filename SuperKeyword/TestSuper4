@@ -1,0 +1,36 @@
+class A1
+{
+    private int x,y;
+    public void putdata()
+    {
+        x=10;
+        y=20;
+    }
+    public void display()
+    {
+        System.out.println(x+" "+y);
+    }
+}
+class B1 extends A1
+{
+    private int z;
+    public void putdata()
+    {
+        super.putdata();
+        z=30;
+    }
+    public void display()
+    {
+        super.display();
+        System.out.println(z);
+    }
+}
+class TestSuper4
+{
+    public static void main(String[]args)
+    {
+        B1 ob=new B1();
+        ob.putdata();
+        ob.display();
+    }
+}
