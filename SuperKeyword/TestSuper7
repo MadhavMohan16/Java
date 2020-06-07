@@ -1,0 +1,46 @@
+class A3
+{
+    private int l,b;
+    public A3()
+    {
+        l=b=5;
+    }
+    public A3(int x,int y)
+    {
+        l=x;
+        b=y;
+    }
+    public int area()
+    {
+        return l*b;
+    }
+}
+class B3 extends A3
+{
+    private int h;
+    public B3()
+    {
+        super();
+        h=6;
+    }
+    public B3(int x,int y,int z)
+    {
+        super(x,y);
+        h=z;
+    }
+    public void volume()
+    {
+        int v=area()*h;
+        System.out.println("Volume="+v);
+    }
+}
+class TestSuper7
+{
+    public static void main(String[]args)
+    {
+        B3 ob1=new B3();
+        B3 ob2=new B3(1,2,3);
+        ob1.volume();
+        ob2.volume();
+    }
+} 
