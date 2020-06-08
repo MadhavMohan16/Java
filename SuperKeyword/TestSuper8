@@ -1,0 +1,66 @@
+class A4
+{
+    private int l;
+    public A4()
+    {
+        l=5;
+    }
+    public A4(int x)
+    {
+        l=x;
+    }
+    public void display()
+    {
+        System.out.println(l);
+    }
+}
+class B4 extends A4
+{
+    private int b;
+    public B4()
+    {
+        super();
+        b=5;
+    }
+    public B4(int x,int y)
+    {
+        super(x);
+        b=y;
+    }
+    public void display()
+    {
+        super.display();
+        System.out.println(b);
+    }
+}
+class C4 extends B4
+{
+    private int h;
+    public C4()
+    {
+       super();
+        h=5;
+    }
+    public C4(int x,int y,int z)
+    {
+        super(x,y);
+        h=z;
+    }
+    public void display()
+    {
+        super.display();
+        System.out.println(h);
+    }
+}
+class TestSuper8
+{
+    public static void main(String[]args)
+    {
+        C4 ob1=new C4();
+        C4 ob2=new C4(5,6,7);
+        ob1.display();
+        ob2.display();
+    }
+}
+
+
