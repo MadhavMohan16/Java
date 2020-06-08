@@ -1,0 +1,58 @@
+class A6
+{
+    int a,b;
+    void putdata()
+    {
+        a=5;
+        b=10;
+    }
+    void putdata(int x,int y)
+    {
+        a=x;
+        b=y;
+    }
+}
+class B6 extends A6
+{
+    private int c;
+    void putdata()
+    {
+        super.putdata();
+        c=15;
+        System.out.println(a+b+c);
+    }
+    void putdata(int x,int y,int z)
+    {
+        super.putdata(x,y);
+        c=z;
+        System.out.println(a+b+c);
+    }
+}
+class C6 extends A6
+{
+    private int c;
+    void putdata()
+    {
+        super.putdata();
+        c=15;
+        System.out.println(a-b-c);
+    }
+    void putdata(int x,int y,int z)
+    {
+        super.putdata(x,y);
+        c=z;
+        System.out.println(a-b-c);
+    }
+}
+class TestSuper9
+{
+    public static void main(String[]args)
+    {
+        B6 ob1=new B6();
+        C6 ob2=new C6();
+        ob1.putdata();
+        ob1.putdata(20,25,35);
+        ob2.putdata();
+        ob2.putdata(20,25,30);
+    }
+}
