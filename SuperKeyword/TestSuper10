@@ -1,0 +1,68 @@
+class A7
+{
+    int a;
+    void putdata()
+    {
+        a=5;
+    }
+    void display()
+    {
+        System.out.println(a);
+    }
+}
+class B7 extends A7
+{
+    int b;
+    void putdata()
+    {
+        super.putdata();
+        b=10;
+    }
+    void display()
+    {
+        super.display();
+        System.out.println(a+" "+b); 
+    }
+}
+class C7 extends B7
+{
+    int c;
+    void putdata()
+    {
+        super.putdata();
+        c=20;
+    }
+    void display()
+    {
+        super.display();
+        System.out.println(a+" "+b+" "+c);
+    }
+}
+class D7 extends B7
+{
+    int c;
+    void putdata()
+    {
+        super.putdata();
+        c=30;
+    }
+    void display()
+    {
+        super.display();
+        System.out.println(a+" "+b+" "+c);
+    }
+}
+class TestSuper10
+{
+    public static void main(String[]args)
+    {
+        C7 ob1=new C7();
+        D7 ob2=new D7();
+        ob1.putdata();
+        ob2.putdata();
+        ob1.display();
+        ob2.display();
+    }
+}
+
+
