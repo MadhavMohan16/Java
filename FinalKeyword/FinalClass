@@ -1,0 +1,22 @@
+final class A
+{
+    void putdata()
+    {
+        System.out.println("Hello");
+    }
+}
+class B extends A
+{
+    void putdata()
+    {
+        System.out.println("World");
+    }
+}
+class FinalClass
+{
+    public static void main(String[]args)
+    {
+        B ob=new B();
+        ob.putdata();
+    }
+}
