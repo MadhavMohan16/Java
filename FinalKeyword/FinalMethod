@@ -1,0 +1,22 @@
+class A1
+{
+    final  void putdata()
+    {
+        System.out.println("Hello");
+    }
+}
+class B1 extends A1
+{
+    void putdata()//error
+    {
+        System.out.println("World");
+    }
+}
+class FinalMethod
+{
+    public static void main(String[]args)
+    {
+        B1 ob=new B1();
+        ob.putdata();
+    }
+}
