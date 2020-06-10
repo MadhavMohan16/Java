@@ -1,0 +1,16 @@
+class Bike
+{
+    final int speedLimit=90;
+    void run()
+    {
+        speedLimit=400;
+    }
+}
+class FinalVariable
+{
+        public static void main(String[]args)
+        {
+            Bike ob=new Bike();
+            ob.run();
+        }
+}
