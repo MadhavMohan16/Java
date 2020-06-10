@@ -1,0 +1,17 @@
+class A3
+{
+    int cube(final int n)
+    {
+        n=n+2;//error
+         return n*n*n;
+    }
+}
+class FinalParameter
+{
+    public static void main(String[]args)
+    {
+        A3 ob=new A3();
+        int v=ob.cube(5);
+        System.out.println(v);
+    }
+}
