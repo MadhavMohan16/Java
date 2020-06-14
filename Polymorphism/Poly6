@@ -1,0 +1,54 @@
+class Shape1
+{
+    void draw()
+    {
+        System.out.println("Nothing to draw");
+    }
+    void putdata()
+    {
+        System.out.println("Nothing to initalise");
+    }
+}
+class Square1 extends Shape1
+{
+    private int l;
+    void putdata()
+    {
+        l=5;
+    }
+    void draw()
+    {
+        System.out.println("Area of square="+(l*l));
+    }
+}
+class Rectangle1 extends Shape1
+{
+    private int l,b;
+    void putdata()
+    {
+        l=5;
+        b=3;
+    }
+    void draw()
+    {
+        System.out.println("Area of rectangle="+(l*b));
+    }
+}
+class Poly6
+{
+    public static void main(String[]args)
+    {
+        Shape1 s=new Shape1();
+        s.putdata();
+        s.draw();
+        s=new Square1();
+        s.putdata();
+        s.draw();
+        s=new Rectangle1();
+        s.putdata();
+        s.draw();
+    }
+}
+    
+    
+    
