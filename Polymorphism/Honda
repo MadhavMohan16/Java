@@ -1,0 +1,13 @@
+class Bike1
+{
+    int speedlimit=90;
+}
+class Honda extends Bike1
+{
+    int speddlimit=150;
+    public static void main(String[]args)
+    {
+        Bike1 ob=new Honda();
+        System.out.println(ob.speedlimit);
+    }
+}
