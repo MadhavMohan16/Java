@@ -1,0 +1,19 @@
+abstract class Vehicle
+{
+    abstract void bike();
+}
+class Honda extends Vehicle
+{
+    void bike()
+    {
+        System.out.println("Bike is running");
+    }
+}
+class Abstract
+{
+    public static void main(String[]args)
+    {
+        Honda ob=new Honda();
+        ob.bike();
+    }
+}
