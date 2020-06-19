@@ -1,0 +1,29 @@
+abstract class Vehicle2
+{
+    String msg;
+    Vehicle2(String msg)
+    {
+        this.msg=msg;
+    }
+    void display()
+    {
+        System.out.println(msg);
+    }
+}
+class Honda2 extends Vehicle2
+{
+    Honda2(String  msg)
+    {
+        super(msg);
+    }
+}
+class Abstract3
+{
+    public static void main(String[]args)
+    {
+        Honda2 ob=new Honda2("Constructor is invoked");
+        ob.display();
+    }
+}
+        
+    
