@@ -1,0 +1,28 @@
+abstract class Bike3
+{
+    abstract void run();
+    void changeGear()
+    {
+        System.out.println("gear changed");
+    }
+    Bike3()
+    {
+        System.out.println("bike is created");
+    }
+}
+class Honda3 extends Bike3
+{
+    void run()
+    {
+        System.out.println("running safely");
+    }
+}
+class Abstract4
+{
+    public static void main(String[]args)
+    {
+        Bike3 ob=new Honda3();
+        ob.run();
+        ob.changeGear();
+    }
+}
