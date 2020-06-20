@@ -1,0 +1,27 @@
+abstract class Vehicle4
+{
+    abstract void display();
+    abstract void display(String msg);
+}
+class Honda4 extends Vehicle4
+{
+   void display()
+   {
+       System.out.println("abstract method is invoked");
+   }
+   void display(String msg)
+   {
+       System.out.println(msg);
+   }
+}
+class Abstract5
+{
+    public static void main(String[]args)
+    {
+        Honda4 ob=new Honda4();
+        ob.display();
+        ob.display("overloaded abstract method is invoked");
+    }
+}
+
+    
