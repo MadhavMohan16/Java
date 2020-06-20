@@ -1,0 +1,30 @@
+abstract class Vehicle5
+{
+    int no_of_tyres;
+    abstract void start();
+}
+class Car5 extends Vehicle5
+{
+    void start()
+    {
+        System.out.println("Car start with key");
+    }
+}
+class Scooter5 extends Vehicle5
+{
+    void start()
+    {
+        System.out.println("Scooter start with kick");
+    }
+}
+class Abstract6
+{
+    public static void main(String[]args)
+    {
+        Vehicle5 ob=new Car5();
+        ob.start();
+        ob=new Scooter5();
+        ob.start();
+    }
+}
+    
