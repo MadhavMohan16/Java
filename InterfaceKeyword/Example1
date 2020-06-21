@@ -1,0 +1,16 @@
+interface Printable
+{
+    void print();
+}
+class Example1 implements Printable
+{
+    public void print()
+    {
+        System.out.println("Hello");
+    }
+    public static void main(String[]args)
+    {
+        Example1 ob=new Example1();
+        ob.print();
+    }
+}
