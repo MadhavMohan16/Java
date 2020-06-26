@@ -1,0 +1,27 @@
+interface Bank
+{
+    float rateOfInterest();
+}
+class SBI implements Bank
+{
+    public float rateOfInterest()
+    {
+        return 7.8f;
+    }
+}
+class AXIS implements Bank
+{
+    public float rateOfInterest()
+    {
+        return 9.7f;
+    }
+}
+class Example3
+{
+    public static void main(String[]args)
+    {
+        Bank b=new AXIS();
+        float f=b.rateOfInterest();
+        System.out.println(f);
+    }
+}
