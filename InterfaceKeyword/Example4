@@ -1,0 +1,26 @@
+interface Printable1
+{
+    void print();
+}
+interface Showable1
+{
+    void show();
+}
+class Example4 implements Printable1,Showable1
+{
+    public void print()
+    {
+        System.out.println("Hello");
+    }
+    public void show()
+    {
+        System.out.println("Welcome");
+    }
+    public static void main(String[]args)
+    {
+        Example4 ob=new Example4();
+        ob.print();
+        ob.show();     
+    }
+}
+    
