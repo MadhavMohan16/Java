@@ -1,0 +1,24 @@
+interface Drawable2
+{
+    void draw();
+    static int cube(int x)
+    {
+        return x*x*x;
+    }
+}
+class Rectangle2 implements Drawable2
+{
+    public void draw()
+    {
+        System.out.println("drawing rectangle");
+    }
+}
+class Example8
+{
+    public static void main(String[]args)
+    {
+        Drawable2 ob=new Rectangle2();
+        ob.draw();
+        System.out.println(Drawable2.cube(5));
+    }
+}
