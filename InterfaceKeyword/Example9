@@ -1,0 +1,46 @@
+interface Shape3
+{
+    void putdata();
+    void show();
+}
+class Square3 implements Shape3
+{
+    private int side;
+    public void putdata()
+    {
+        side=5;
+    }
+    public void show()
+    {
+        System.out.println("Area of square="+(side*side));
+    }
+}
+class Rectangle3 implements Shape3
+{
+    private int l,b;
+    public void putdata()
+    {
+        l=5;
+        b=3;
+    }
+    public void show()
+    {
+        System.out.println("Area of rectangle="+(l*b));
+    }
+}
+class Example9
+{
+    public static void main(String[]args)
+    {
+        Shape3 s;
+        s=new Square3();
+        s.putdata();
+        s.show();
+        s=new Rectangle3();
+        s.putdata();
+        s.show();
+    }
+}
+        
+        
+    
