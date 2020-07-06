@@ -1,0 +1,12 @@
+public class StringExample 
+{
+    public static void main(String[]args)
+    {
+        String s1=new String("deepak");//two object are created
+        String s2="sameer";//one object created
+        String s3="deepak";//zero object created
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s3);
+    }
+}
