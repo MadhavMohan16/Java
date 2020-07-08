@@ -1,0 +1,9 @@
+public class TestStringComparison4 
+{
+    public static void main(String[]args)
+    {
+        String s1="abc";//97 //only compare first letter if letter difference zero than go to second letter 
+        String s2="Abc";//65
+        System.out.println(s1.compareTo(s2));
+    }
+}
