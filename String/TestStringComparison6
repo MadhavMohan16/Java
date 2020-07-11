@@ -1,0 +1,15 @@
+public class TestStringComparison6
+{
+    public static void main(String[]args)
+    {
+        String s1="Madhav";
+        String s2="Mohan";
+        int i=s1.compareTo(s2);
+        if(i==0)
+            System.out.println("Strings are equal");
+        else if (i>0)
+            System.out.println("Strings are not equal and opposite to dictionary");
+        else
+            System.out.println("Strings are not equal and dictionary order");
+    }
+}
