@@ -1,0 +1,12 @@
+public class StringLengthMethod2
+{
+    public static void main(String[]args)
+    {
+        String name="";//only one object created
+        String email="abc@gmail.com";//only one on=bject created
+        String password="abc123";//only one object craeted
+        System.out.println(name.length());
+        System.out.println(email.length());
+        System.out.println(password.length());
+    }
+}
