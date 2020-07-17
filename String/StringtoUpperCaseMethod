@@ -1,0 +1,10 @@
+public class StringtoUpperCaseMethod
+{
+    public static void main(String[]args)
+    {
+        String s1="computer";
+        String s2="sAMMeR";
+        System.out.println(s1.toUpperCase());
+        System.out.println(s2.toUpperCase());
+    }
+}
