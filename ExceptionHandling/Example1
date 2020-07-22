@@ -1,0 +1,9 @@
+import java.io.*;
+public class Example1
+{
+    public static void main(String[]args)
+    {
+            FileInputStream fis=new FileInputStream("d:/abc.txt");
+            Class.forName("com.mysql.jdbc.Driver");
+    }
+}
