@@ -1,0 +1,11 @@
+public class Example4
+{
+    public static void main(String[]args)
+    {
+        System.out.println("First line");
+        int a=5,b=0,c;
+        c=a/b;
+        System.out.println(c);
+        System.out.println("Last line");
+    }
+}
