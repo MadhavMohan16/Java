@@ -1,0 +1,24 @@
+import java.util.*;
+public class Example12
+{
+    public static void main(String[]args)
+    {
+        try
+        {
+        Scanner in=new Scanner(System.in);
+        int a,b;
+        System.out.println("Enter the value of a and b");
+        a=in.nextInt();
+        b=in.nextInt();
+        int c=a/b;
+        System.out.println(c);
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println(e);
+        }
+        System.out.println("Rest of the code");
+    }
+}
+                
+        
