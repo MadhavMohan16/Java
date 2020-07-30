@@ -1,0 +1,26 @@
+public class NestedTryAndCatchBlock
+{
+    public static void main(String[]args)
+    {
+        try
+        {
+             System.out.println("Welcome");
+            try
+            {
+               int a[]={1,2,3};
+               int b=10,c=0;//you also check if c=1 
+               a[42]=b/c;
+               System.out.println(a[0]);
+            }
+            catch(ArithmeticException e)
+            {
+                System.out.println("DIVISION PROBLEM");
+            }
+            System.out.println("BYE");
+        }
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("Array index problem");
+        }
+    }
+}
