@@ -1,0 +1,39 @@
+public class NestedTryAndCatchBlock2 
+{
+    static void f1(int a)
+    {
+        try
+        {
+         if(a==1)
+          a=a/(a-a);
+               if(a==2)
+               {
+                int c[]={1};
+                 c[42]=99;
+               }
+        }
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("Array index problem="+e);
+        }
+        /*catch(Exception e)
+        {
+            System.out.println("Aise lagane pr main function k catch pr nhi jayega");
+        }*/
+    }
+    public static void main(String[]args)
+    {
+        try
+        {
+            int a=0;//if a=1 or a=2 check
+            int b=42/a;
+            f1(a);
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("DIVISION PROBLEM="+e);
+        }
+    }
+}
+
+
