@@ -1,0 +1,20 @@
+public class TestFinallyBlock4
+{
+    public static void main(String[]args)
+    {
+        try
+        {
+            int a[]={1,2,3};
+            a[42]=45;
+            System.out.println("Won't execute");
+        }
+        catch(Exception e)
+        {
+            System.out.println("World");
+        }
+        finally
+        {
+            System.out.println("Good");
+        }   
+    }
+}
