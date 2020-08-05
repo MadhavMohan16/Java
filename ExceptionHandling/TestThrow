@@ -1,0 +1,14 @@
+//Our throw default catch//
+public class TestThrow 
+{
+    public static void main(String[]args)
+    {
+        int balance=5000;
+        int withdrawAmount=10000;
+        if(balance<withdrawAmount)
+            throw new ArithmeticException("Insufficient Balance");
+        balance=balance-withdrawAmount;
+        System.out.println("Transaction succesfully completed");
+        System.out.println("Program Continue");
+    }
+}
