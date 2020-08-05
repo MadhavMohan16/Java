@@ -1,0 +1,22 @@
+//Our catch our throw//
+public class TestThrow1
+{
+    public static void main(String[]args)
+    {
+        int balance=5000;
+        int withdrawAmount=10000;
+        try
+        {
+            if(balance<withdrawAmount)
+                throw new ArithmeticException("Insufficient Balance");
+            balance=balance-withdrawAmount;
+            System.out.println("Transaction Successfuly Completed");
+            System.out.println("Program Continue");
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("Exception="+e);
+        }
+        System.out.println("Program continue");
+    }
+}
