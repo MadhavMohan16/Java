@@ -1,0 +1,29 @@
+import java.util.*;
+public class TestThrow2
+{
+    public static void main(String[]args)
+    {
+        Scanner obj=new Scanner(System.in);
+            try
+            {
+                System.out.println("Enter the number");
+                int n=obj.nextInt();
+                long f=1;
+                if(n<0)
+                    throw new NullPointerException();
+                else
+                {
+                    while(n>0)
+                    {
+                        f=f*n;
+                        n--;
+                    }
+                    System.out.println("Factorial of a number="+f);
+                }
+            }
+            catch(NullPointerException e)
+            {
+                System.out.println("Negative value are not allowed");
+            }
+    }
+}
