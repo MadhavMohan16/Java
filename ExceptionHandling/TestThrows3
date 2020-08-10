@@ -1,0 +1,17 @@
+import java.io.*;
+class M1
+{
+    void method()throws IOException
+    {
+        throw new IOException("device error");//checked exception
+    }
+}
+class TestThrows3
+{
+    public static void main(String[]args) throws IOException//declare the exception 
+    {
+            M1 ob=new M1();
+            ob.method();
+        System.out.println("normal flow");
+    }
+}
