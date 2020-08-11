@@ -1,0 +1,21 @@
+public class TryAndCatchBlockUsingFunction
+{
+    void f1()
+    {
+        int a=5/0;
+        System.out.println(a);
+    }
+    public static void main(String[]args)
+    {
+        try
+        {
+            TryAndCatchBlockUsingFunction obj=new TryAndCatchBlockUsingFunction();
+            obj.f1();
+            System.out.println("This won't execute");
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("Please do not divide with zero");
+        }
+    }
+}
