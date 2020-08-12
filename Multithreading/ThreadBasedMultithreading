@@ -1,0 +1,31 @@
+//By extending Thread class//
+class A1 extends Thread
+{
+    public void run()
+    {
+        for(int i=0;i<5;i++)
+        {
+            System.out.println("Hi");
+        }
+    }
+}
+class B1 extends Thread
+{
+    public void run()
+    {
+        for(int i=0;i<5;i++)
+        {
+            System.out.println("Hello");
+        }
+    }
+}
+public class ThreadBasedMultithreading
+{
+    public static void main(String[]args)
+    {
+            A1 ob1=new A1();
+            B1 ob2=new B1();
+            ob1.start();//internally thread execute a run method
+            ob2.start();//internally thread execute a run method
+    }
+}
