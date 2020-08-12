@@ -1,0 +1,43 @@
+class ZealThread extends Thread
+{
+    Thread t;
+    public ZealThread()
+    {
+        t=new Thread(this,"Zeal");
+        t.start();
+    }
+    public void run()
+    {
+        try
+        {
+            for(int i=1;i<=5;i++)
+            {
+                System.out.println("Zeal="+i);
+                Thread.sleep(500);
+            }
+        }
+        catch(InterruptedException e)
+        {
+            System.out.println(e);
+        }
+    }
+}
+public class ThreadBasedMultithreading1
+{
+    public static void main(String[]args)
+    {
+        ZealThread t1=new ZealThread();
+        try
+        {
+            for(int i=5;i>=1;i--)
+            {
+                System.out.println("Main="+i);
+                Thread.sleep(1000);
+            }
+        }
+        catch(InterruptedException e)
+        {
+            System.out.println(e);
+        }
+    }
+}
