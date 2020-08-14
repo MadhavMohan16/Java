@@ -1,0 +1,58 @@
+class Table3
+{
+    public void printTable(int n)
+    {
+        try
+        {
+            synchronized(this)//Synchronized Block start
+            {
+                for(int i=1;i<=10;i++)
+                {
+                System.out.println(n*i);
+                Thread.sleep(500);
+                }
+            }//Synchronized Block End
+        }
+        catch(InterruptedException e)
+        {
+            System.out.println(e);
+        }
+    }
+}
+class MyThread5 extends Thread
+{
+    Table3 t;
+       public MyThread5(Table3 t)         
+       {
+           this.t=t;
+       }
+       public void run()
+       {
+           t.printTable(5);
+       }
+}
+class MyThread6 extends Thread
+{
+    Table3 t;
+    public MyThread6(Table3 t)
+    {
+        this.t=t;
+    }
+    public void run()
+    {
+        t.printTable(100);
+    }
+}
+public class TestSynchronization4
+{
+    public static void main(String[]args)
+    {
+        Table3 ob=new Table3();
+        MyThread5 t1=new MyThread5(ob);
+        MyThread6 t2=new MyThread6(ob);
+        t1.start();
+        t2.start();
+    }
+}
+         
+    
