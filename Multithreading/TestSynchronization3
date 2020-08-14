@@ -1,0 +1,59 @@
+class Institute
+{
+    public synchronized void classRoom(String facultyName)
+    {
+        try
+        {
+            for(int i=1;i<=10;i++)
+            {
+                System.out.println(facultyName+" "+i);
+                Thread.sleep(500);
+            }
+        }
+        catch(InterruptedException e)
+        {
+            e.printStackTrace();
+        }
+    }
+    public  void show()//Also check when this method is sychronized
+    {
+        try
+        {
+            for(int i=0;i<=10;i++)
+            {
+                System.out.println(Thread.currentThread().getClass());
+                Thread.sleep(500);
+            }
+        }
+        catch(InterruptedException e)
+        {
+            e.printStackTrace();
+        }
+    }
+}
+class MyThread extends Thread
+{
+    Institute ins;
+    String facultyName;
+    MyThread(Institute ins,String facultyName)
+    {
+        this.ins=ins;
+        this.facultyName=facultyName;
+    }
+    public void run()
+    {
+        ins.classRoom(facultyName);
+    }
+}
+public class TestSynchronization3
+{
+    public static void main(String[]args)
+    {
+        Institute ins=new Institute();
+        MyThread t1=new MyThread(ins,"Sameer");
+        MyThread t2=new MyThread(ins,"Ramchandra");
+        t1.start();
+        t2.start();
+        ins.show();
+    }
+}
