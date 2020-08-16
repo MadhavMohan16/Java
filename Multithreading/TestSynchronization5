@@ -1,0 +1,61 @@
+class Table4
+{  
+    synchronized static void printTable(int n)
+    {  
+       for(int i=1;i<=10;i++)
+       {  
+        try
+        {  
+            System.out.println(n*i); 
+            Thread.sleep(400);  
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }  
+        }  
+    }  
+}  
+class MyThread7 extends Thread
+{  
+     public void run()
+     {  
+     Table4.printTable(1);  
+     }  
+}  
+class MyThread8 extends Thread
+{  
+       public void run()
+       {  
+       Table4.printTable(10);  
+       }  
+}  
+class MyThread9 extends Thread
+{  
+       public void run()
+       {  
+       Table4.printTable(100);  
+       }  
+} 
+class MyThread10 extends Thread
+{  
+       public void run()
+       {  
+       Table4.printTable(1000);  
+       }  
+}  
+public class TestSynchronization5
+{  
+  public static void main(String t[])
+  {  
+        MyThread7 t1=new MyThread7();       
+        MyThread8 t2=new MyThread8();  
+        MyThread9 t3=new MyThread9();  
+        MyThread10 t4=new MyThread10(); 
+        t1.start();  
+        t2.start();  
+        t3.start();  
+        t4.start();
+  
+ }  
+}  
