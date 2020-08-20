@@ -1,0 +1,60 @@
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+class Account1
+{
+    int balance=10000;
+    public synchronized void withdraw(int wamt)
+    {
+        System.out.println("Withdraw  process starts");
+        System.out.println("Before withdraw="+balance);
+        if(balance<wamt)
+        {
+            System.out.println("Insufficient balance");
+            try
+            {
+                wait(10000);
+            }
+            catch(Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+        balance=balance-wamt;
+        System.out.println("After withdraw="+balance);
+    }
+    public synchronized void deposit(int damt)
+    {
+        System.out.println("Deposit process starts");
+        System.out.println("Before Deposit="+balance);
+        balance=balance+damt;
+        System.out.println("After Deposit="+balance);
+    }
+}
+public class InterThreadCommunication1
+{
+    public static void main(String[]args)
+    {
+        Account1 ac=new Account1();
+        new Thread()
+        {
+            public  void run()
+            {
+                ac.withdraw(15000);
+            }
+        }.start();
+        try {
+            Thread.sleep(15000);
+        } catch (InterruptedException e) {
+          e.printStackTrace();
+        }
+        new Thread()
+        {
+            public  void run()
+            {
+                ac.deposit(10000);
+            }
+        }.start();
+    }
+}
